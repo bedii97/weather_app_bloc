@@ -13,23 +13,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-      providers: [
-        BlocProvider(
-          create: (context) => WeatherCubit(),
-        ),
-        BlocProvider(
-          create: (context) => SettingsCubit(),
-        )
-      ],
-      child: MaterialApp(
-        title: 'Material App',
-        routes: {
-          '/': (context) => const HomePage2(),
-          '/settings': (context) => const SettingsPage(),
-        },
-        initialRoute: '/',
-      ),
+    return MaterialApp(
+      title: 'Material App',
+      routes: {
+        '/': (context) => const HomePage(),
+        '/settings': (context) => const SettingsPage(),
+      },
+      initialRoute: '/',
     );
   }
 }
