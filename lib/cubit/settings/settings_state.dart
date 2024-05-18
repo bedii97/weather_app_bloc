@@ -9,12 +9,4 @@ final class SettingsInitial extends SettingsState {
   SettingsInitial({
     required this.isCelcius,
   });
-  //copywith
-  SettingsInitial copyWith({
-    bool? isCelcius,
-  }) {
-    return SettingsInitial(
-      isCelcius: isCelcius ?? this.isCelcius,
-    );
-  }
 }

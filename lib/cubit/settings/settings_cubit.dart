@@ -7,9 +7,9 @@ class SettingsCubit extends Cubit<SettingsState> {
   SettingsCubit() : super(SettingsInitial(isCelcius: true));
 
   void toggleTemperatureUnit() {
-    final currentstate = state;
-    if (currentstate is SettingsInitial) {
-      emit(copyWith(isCelcius: !currentstate.isCelcius));
+    final currentState = state;
+    if (currentState is SettingsInitial) {
+      emit(SettingsInitial(isCelcius: !currentState.isCelcius));
     }
   }
 
